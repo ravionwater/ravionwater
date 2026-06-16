@@ -4,11 +4,35 @@
 <title>Ravion Water</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+
+/* GRID LAYOUT (CORPORATE LOOK) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
 }
+
+/* BOX DESIGN */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    background: #0077b6;
+    color: white;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
 
 /* HEADER */
 header {
@@ -133,18 +157,21 @@ With extensive experience in executing complex and large-scale projects, backed 
 <h2>Our Products</h2>
 
 
-<ul>
-<li>Purified Water Generation Systems</li>
-<li>PW Storage & Distribution Systems</li>
-<li>WFI Storage & Distribution Systems</li>
-<li>Pure Steam Generation Systems</li>
-<li>Pure Steam Distribution Systems</li>
-<li>Multi-Column Distillation Plants</li>
-<li>All Types of SS Vessels</li>
-<li>CIP / SIP Systems</li>
-<li>SS Pipes & Fittings</li>
-<li>All Water & Process System Spares</li>
-</ul>
+
+<div class="grid">
+
+<div class="card">Purified Water Generation Systems</div>
+<div class="card">PW Storage & Distribution Systems</div>
+<div class="card">WFI Storage & Distribution Systems</div>
+<div class="card">Pure Steam Generation Systems</div>
+<div class="card">Pure Steam Distribution Systems</div>
+<div class="card">Multi-Column Distillation Plants</div>
+<div class="card">All Types of SS Vessels</div>
+<div class="card">CIP / SIP Systems</div>
+<div class="card">SS Pipes & Fittings</div>
+<div class="card">All Water & Process System Spares</div>
+
+</div>
 
 </div>
 </section>
@@ -186,17 +213,19 @@ With extensive experience in executing complex and large-scale projects, backed 
 
 <h2>Our Services</h2>
 
+<div class="grid">
 
-<ul>
-<li>Erection & Support Services</li>
-<li>Orbital Welding Services</li>
-<li>Manual TIG Welding Services</li>
-<li>Boroscopy & Videoscopy Services</li>
-<li>Hydrotest & Passivation Services</li>
-<li>Radiography</li>
-<li>Documentation (DQ, IQ & OQ)</li>
-<li>Installation & Commissioning Services</li>
-</ul>
+<div class="card">Erection & Support Services</div>
+<div class="card">Orbital Welding Services</div>
+<div class="card">Manual TIG Welding Services</div>
+<div class="card">Boroscopy & Videoscopy Services</div>
+<div class="card">Hydrotest & Passivation Services</div>
+<div class="card">Radiography</div>
+<div class="card">Documentation (DQ, IQ & OQ)</div>
+<div class="card">Installation & Commissioning Services</div>
+
+</div>
+
 
 </div>
 </section>
