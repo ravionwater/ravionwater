@@ -3,109 +3,119 @@
 <head>
 <title>Ravion Water</title>
 
+
 <style>
-
-/* GRID LAYOUT (CORPORATE LOOK) */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: 30px auto;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial;
+    background: #f8f9fb;
 }
-
-/* BOX DESIGN */
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 600;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-/* HOVER EFFECT */
-.card:hover {
-    background: #0077b6;
-    color: white;
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
 
 /* HEADER */
 header {
     text-align: center;
-    padding: 30px;
-    background: #ffffff;
+    padding: 30px 10px;
+    background: white;
 }
 
 header img {
-    width: 280px;
+    width: 250px;
 }
 
 .tagline {
-    color: #023e8a;
-    font-size: 18px;
-    margin-top: 10px;
+    color: #0077b6;
+    font-size: 16px;
 }
 
-/* NAV */
+/* NAVBAR */
 nav {
     background: #023e8a;
-    padding: 12px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
 }
 
 nav a {
     color: white;
-    margin: 15px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 16px;
 }
 
-nav a:hover {
-    color: #90e0ef;
-}
-
-/* SECTIONS */
+/* SECTION */
 section {
-    padding: 50px 20px;
-}
-
-.container {
-    max-width: 1000px;
-    margin: auto;
+    padding: 40px 8%;
 }
 
 h2 {
-    color: #0077b6;
     text-align: center;
+    color: #023e8a;
+    margin-bottom: 20px;
 }
 
-.section-img {
-    width: 100%;
-    max-width: 400px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-}
-
-/* LIST */
-ul {
-    max-width: 700px;
+/* ABOUT TEXT */
+.about-text {
+    max-width: 900px;
     margin: auto;
+    text-align: center;
+    color: #444;
+    font-size: 16px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* MODERN CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+/* MODERN EFFECT */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background: #0077b6;
+    color: white;
+}
+
+/* BLOG */
+.blog {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 700px;
+    border: 1px solid #eee;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
 }
 
 /* FOOTER */
 footer {
-    background: #0077b6;
+    background: #023e8a;
     color: white;
     text-align: center;
     padding: 15px;
 }
 </style>
+
 
 </head>
 
@@ -130,25 +140,20 @@ footer {
 
 
 <!-- ABOUT -->
+
 <section id="about">
-<div class="container">
 <h2>About Ravion Water</h2>
 
+<div class="about-text">
+<p>Ravion Water is a company dedicated to providing custom-engineered solutions for Pharmaceutical High-Purity Water Systems and Bio-Process Equipment.</p>
 
-<p>
-Ravion Water is a company dedicated to providing custom-engineered solutions for Pharmaceutical High-Purity Water Systems and Bio-Process Equipment.
-</p>
+<p>We specialize in delivering innovative project management solutions tailored to meet the specific needs of our customers.</p>
 
-<p>
-We specialize in delivering innovative project management solutions tailored to meet the specific needs of our customers.
-</p>
-
-<p>
-With extensive experience in executing complex and large-scale projects, backed by a highly skilled workforce, Ravion has established itself as a trusted partner in the pharmaceutical and biotechnology industries.
-</p>
-
+<p>With extensive experience in executing complex and large-scale projects, Ravion has established itself as a trusted partner in the pharmaceutical and biotechnology industries.</p>
 </div>
+
 </section>
+
 
 <!-- PRODUCTS -->
 <section id="products" style="background:#f4f9ff;">
@@ -203,34 +208,27 @@ With extensive experience in executing complex and large-scale projects, backed 
 </section>
 
 <!-- BLOGS -->
-<section id="blogs" style="background:#ffffff;">
-<div class="container">
 
+<section id="blogs">
 <h2>Our Blogs</h2>
 
-<p style="text-align:center;">Latest updates from Ravion Water</p>
-
-<div style="max-width:800px; margin:auto;">
-
-<div style="background:#f4f9ff; padding:20px; margin:15px 0; border-radius:10px;">
-    <h3>High-Purity Water Systems</h3>
-    <p>High-purity water is essential in pharmaceutical industries to maintain quality and safety standards.</p>
+<div class="blog">
+<h3>High-Purity Water Systems</h3>
+<p>Essential for pharmaceutical product safety and quality.</p>
 </div>
 
-<div style="background:#f4f9ff; padding:20px; margin:15px 0; border-radius:10px;">
-    <h3>WFI Systems Explained</h3>
-    <p>Water for Injection systems play a critical role in sterile production processes.</p>
+<div class="blog">
+<h3>WFI Systems Explained</h3>
+<p>Critical in sterile manufacturing processes.</p>
 </div>
 
-<div style="background:#f4f9ff; padding:20px; margin:15px 0; border-radius:10px;">
-    <h3>CIP / SIP Systems</h3>
-    <p>These systems ensure proper cleaning and sterilization of production equipment.</p>
+<div class="blog">
+<h3>CIP / SIP Systems</h3>
+<p>Maintain hygiene and prevent contamination.</p>
 </div>
 
-</div>
-
-</div>
 </section>
+
     
 <!-- CONTACT -->
 <section id="contact" style="background:#f4f9ff;">
