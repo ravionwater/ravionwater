@@ -40,6 +40,43 @@
 
 <style>
 
+
+/* HEADER */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: white;           /* ✅ full white header */
+    border-bottom: 1px solid #ddd;
+}
+
+/* LOGO */
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* MENU */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* MENU TEXT */
+.nav-links a {
+    color: #0b3d91;              /* ✅ blue text */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* HOVER */
+.nav-links a:hover {
+    color: #0077b6;
+}
+``
+
 /* REMOVE EXTRA SPACE */
 body {
     margin: 0;
@@ -257,17 +294,16 @@ footer {
 <!-- HEADER -->
 
 
-
 <header class="navbar">
 
-    <!-- LEFT SIDE (LOGO) -->
-    <div class="logo-box">
+    <!-- LOGO -->
+    <div class="logo">
         <img src="logo.png" alt="Ravion Logo">
     </div>
 
-    <!-- RIGHT SIDE (MENU) -->
-    <nav class="menu-box">
-        <a href="#">Home</a>
+    <!-- MENU -->
+    <nav class="nav-links">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#products">Products</a>
         <a href="#services">Services</a>
