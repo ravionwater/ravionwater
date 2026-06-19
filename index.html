@@ -39,6 +39,46 @@
 
 
 <style>
+
+/* REMOVE EXTRA SPACE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8%;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* LOGO */
+.logo img {
+    height: 60px;
+}
+
+/* MENU */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* LINKS */
+.nav-links a {
+    text-decoration: none;
+    color: #0b3d91;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* HOVER */
+.nav-links a:hover {
+    color: #0077b6;
+}
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial;
@@ -156,20 +196,26 @@ footer {
 <body>
 
 <!-- HEADER -->
-<header>
-    <img src="logo.png" alt="Ravion Logo">
-    
 
-<!-- NAVIGATION -->
+<header class="navbar">
 
+    <!-- LOGO LEFT -->
+    <div class="logo">
+        <img src="logo.png" alt="Ravion Water">
+    </div>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#services">Services</a>
-    <a href="#blogs">Blogs</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <!-- MENU RIGHT -->
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
 
 
 
