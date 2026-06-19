@@ -12,7 +12,6 @@
 <meta property="og:description" content="High-Purity Water Systems & Bio-Process Equipment">
 <meta property="og:image" content="https://www.ravionwater.in/logo.png">
 <meta property="og:url" content="https://www.ravionwater.in">
-``
 
 <script type="application/ld+json">
 {
@@ -153,14 +152,13 @@ footer {
 <!-- HEADER -->
 
 
+
 <header class="navbar">
 
-    <!-- LOGO -->
     <div class="logo">
         <img src="logo.png" alt="Ravion Logo">
     </div>
 
-    <!-- MENU -->
     <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -171,6 +169,43 @@ footer {
     </nav>
 
 </header>
+
+
+/* HEADER FIX */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   /* ✅ pushes menu right */
+    padding: 12px 6%;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* LOGO */
+.logo img {
+    height: 55px;
+    width: auto;
+}
+
+/* MENU */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    white-space: nowrap;   /* ✅ keeps menu in one line */
+}
+
+/* MENU TEXT */
+.nav-links a {
+    color: #0b3d91;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* HOVER */
+.nav-links a:hover {
+    color: #0077b6;
+}
 
 
 
