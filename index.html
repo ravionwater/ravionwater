@@ -102,20 +102,36 @@ header img {
 }
 
 /* NAVBAR */
-nav {
-    background: #023e8a;
+
+.navbar {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8%;
+    background: #0b3d91;
 }
 
-nav a {
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
 }
+
+.nav-links a:hover {
+    color: #90e0ef;
+}
+``
+
 
 /* SECTION */
 section {
@@ -197,14 +213,13 @@ footer {
 
 <!-- HEADER -->
 
+
 <header class="navbar">
 
-    <!-- LOGO LEFT -->
     <div class="logo">
         <img src="logo.png" alt="Ravion Water">
     </div>
 
-    <!-- MENU RIGHT -->
     <nav class="nav-links">
         <a href="#">Home</a>
         <a href="#about">About</a>
