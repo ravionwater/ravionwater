@@ -130,7 +130,50 @@ header img {
 .nav-links a:hover {
     color: #90e0ef;
 }
-``
+
+
+/* MAIN HEADER */
+.navbar {
+    display: flex;
+    width: 100%;
+}
+
+/* LEFT LOGO SIDE (WHITE) */
+.logo-box {
+    background: white;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO SIZE */
+.logo-box img {
+    height: 60px;
+    width: auto;
+}
+
+/* RIGHT MENU SIDE (BLUE) */
+.menu-box {
+    flex: 1;
+    background: #0b3d91;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+/* MENU LINKS */
+.menu-box a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* HOVER EFFECT */
+.menu-box a:hover {
+    color: #90e0ef;
+}
 
 
 /* SECTION */
@@ -214,13 +257,16 @@ footer {
 <!-- HEADER -->
 
 
+
 <header class="navbar">
 
-    <div class="logo">
-        <img src="logo.png" alt="Ravion Water">
+    <!-- LEFT SIDE (LOGO) -->
+    <div class="logo-box">
+        <img src="logo.png" alt="Ravion Logo">
     </div>
 
-    <nav class="nav-links">
+    <!-- RIGHT SIDE (MENU) -->
+    <nav class="menu-box">
         <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#products">Products</a>
@@ -230,6 +276,7 @@ footer {
     </nav>
 
 </header>
+
 
 
 
