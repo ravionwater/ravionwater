@@ -58,14 +58,23 @@ body {
 }
 
 /* CONTAINER (VERY IMPORTANT) */
+
 .container {
     max-width: 1200px;
     margin: auto;
-    display: flex;                 /* ✅ this fixes alignment */
-    justify-content: space-between; /* ✅ logo left, menu right */
-    align-items: center;           /* ✅ vertical align */
+    display: flex;
+    align-items: center;
     padding: 15px 20px;
+    gap: 50px;   /* ✅ space between logo and menu */
 }
+
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: 30px;   /* ✅ pushes menu near logo */
+}
+
 
 /* LOGO */
 .logo img {
@@ -193,7 +202,6 @@ footer {
     </div>
 
 </header>
-``
 
 
 
