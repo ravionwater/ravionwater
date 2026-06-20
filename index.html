@@ -42,25 +42,23 @@
 
 /* NAV FLEX */
 
+
 .nav-links {
     display: flex;
-    gap: 30px;
     align-items: center;
+    gap: 40px;            /* ✅ main spacing between items */
 }
+
 
 .dropdown {
     position: relative;
 }
 
+
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 35px;
-    left: 0;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    gap: 50px;   /* ✅ space between 2 columns */
 }
+
 
 .dropdown:hover .dropdown-menu {
     display: flex;
@@ -74,11 +72,15 @@
 
 
 /* FIX MENU VISIBILITY */
+
 .nav-links a {
     color: #0b3d91;
     text-decoration: none;
     font-weight: 600;
+    font-size: 16px;
+    padding: 5px 8px;     /* ✅ small spacing around text */
 }
+
 
 
 .about-image-section img {
