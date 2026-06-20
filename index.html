@@ -40,6 +40,69 @@
 <style>
 
 
+/* USP SECTION MAIN */
+.usp {
+    display: flex;
+    background: white;
+    margin: 40px 6%;
+    padding: 40px;
+    border-radius: 10px;
+    gap: 30px;
+}
+
+/* LEFT SIDE */
+.usp-left {
+    flex: 1;
+    border-right: 1px solid #ddd;
+    padding-right: 30px;
+}
+
+.usp-left h2 {
+    color: #2d3e75;
+    margin-bottom: 15px;
+}
+
+.usp-left p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #2d3e75;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* RIGHT SIDE */
+.usp-right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-left: 20px;
+}
+
+/* ITEMS */
+.usp-item {
+    text-align: center;
+}
+
+.usp-item img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.usp-item p {
+    font-size: 14px;
+    color: #444;
+}
+
+  
 /* ABOUT SECTION LAYOUT */
 .about-container {
     display: flex;
