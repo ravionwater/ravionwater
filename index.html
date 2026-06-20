@@ -55,7 +55,6 @@
 }
 
 
-
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -63,20 +62,35 @@
     left: 0;
     background: white;
     padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    min-width: 250px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 999;
 }
 
 
-
 .dropdown:hover .dropdown-menu {
-    display: flex;
-    gap: 40px;
+    display: block;
 }
 
 .dropdown-col {
     display: flex;
     flex-direction: column;
 }
+
+.dropdown-col a {
+    padding: 6px 0;
+    color: #0b3d91;
+    text-decoration: none;
+}
+
+.dropdown-col a:hover {
+    color: #0077b6;
+}
+
+.navbar {
+    overflow: visible !important;
+}
+
 
 
 /* FIX MENU VISIBILITY */
@@ -358,37 +372,38 @@ footer {
         </div>
 
         <!-- MENU -->
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            
-            <!-- DROPDOWN -->
-            <div class="dropdown">
-              <a href="#">Products ▾</a>
-              
-              <div class="dropdown-menu">
-                
-                <div class="dropdown-col">
-                  <a href="#">Pretreatment Systems</a>
-                  <a href="#">Purified Water Generation Systems</a>
-                  <a href="#">PW Storage & Distribution Systems</a>
-                  <a href="#">Multi-Column Distillation Plants</a>
-                  <a href="#">WFI Storage & Distribution Systems</a>
-                  <a href="#">Pure Steam Generation Systems</a>
-                  <a href="#">Pure Steam Distribution Systems</a>
-                  <a href="#">All Types of SS Vessels</a>
-                  <a href="#">CIP / SIP Systems</a>
-                  <a href="#">SS Pipes & Fittings</a>
-                  <a href="#">All Water & Process System Spares</a>
-            </div>
-       </div> <!-- ✅ CLOSE DROPDOWN HERE -->
-              
-            <!-- DROPDOWN -->
-            <div class="dropdown">
-              <a href="#services">Services</a>
+        
+<nav class="nav-links">
 
-              <div class="dropdown-menu">
-                
-                <div class="dropdown-col">
+    <a href="#home">Home</a>
+
+    <!-- PRODUCTS DROPDOWN -->
+    <div class="dropdown">
+        <a href="#">Products ▾</a>
+
+        <div class="dropdown-menu">
+            <div class="dropdown-col">
+                <a href="#">Pretreatment Systems</a>
+                <a href="#">Purified Water Generation Systems</a>
+                <a href="#">PW Storage & Distribution Systems</a>
+                <a href="#">Multi-Column Distillation Plants</a>
+                <a href="#">WFI Storage & Distribution Systems</a>
+                <a href="#">Pure Steam Generation Systems</a>
+                <a href="#">Pure Steam Distribution Systems</a>
+                <a href="#">All Types of SS Vessels</a>
+                <a href="#">CIP / SIP Systems</a>
+                <a href="#">SS Pipes & Fittings</a>
+                <a href="#">All Water & Process System Spares</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES DROPDOWN -->
+    <div class="dropdown">
+        <a href="#">Services ▾</a>
+
+        <div class="dropdown-menu">
+            <div class="dropdown-col">
                 <a href="#">Erection, Fitment & Support</a>
                 <a href="#">Orbital Welding</a>
                 <a href="#">Manual TIG Welding</a>
@@ -398,16 +413,16 @@ footer {
                 <a href="#">Documentation (DQ, IQ & OQ)</a>
                 <a href="#">Installation & Commissioning</a>
             </div>
-            
-        </div> <!-- ✅ CLOSE DROPDOWN HERE -->
+        </div>
+    </div>
 
-        <!-- ✅ THESE MUST BE OUTSIDE -->
-                
-        <a href="#about">About</a>
-        <a href="#blogs">Blogs</a>
-        <a href="#contact">Contact Us</a>
-      
-      </nav>
+    <!-- NORMAL MENU -->
+    <a href="#about">About</a>
+    <a href="#blogs">Blogs</a>
+    <a href="#contact">Contact Us</a>
+
+</nav>
+
 
 
 
