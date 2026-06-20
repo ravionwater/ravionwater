@@ -40,6 +40,45 @@
 <style>
 
 
+/* ABOUT SECTION LAYOUT */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 6%;
+}
+
+/* LEFT TEXT */
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h2 {
+    text-align: left;
+    color: #023e8a;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* RIGHT IMAGE */
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
 
 
 /* RESET */
@@ -211,18 +250,29 @@ footer {
 
 <!-- ABOUT -->
 
-<section id="about">
-<h2>About Ravion Water</h2>
 
-<div class="about-text">
-<p>Ravion Water is a company dedicated to providing custom-engineered solutions for Pharmaceutical High-Purity Water Systems and Bio-Process Equipment.</p>
+section id="about">
+<div class="about-container">
 
-<p>We specialize in delivering innovative project management solutions tailored to meet the specific needs of our customers.</p>
+    <!-- LEFT TEXT -->
+    <div class="about-text">
+        <h2>About Ravion Water</h2>
 
-<p>With extensive experience in executing complex and large-scale projects, Ravion has established itself as a trusted partner in the pharmaceutical and biotechnology industries.</p>
+        <p>Ravion Water is a company dedicated to providing custom-engineered solutions for Pharmaceutical High-Purity Water Systems and Bio-Process Equipment.</p>
+
+        <p>We specialize in delivering innovative project management solutions tailored to meet the specific needs of our customers.</p>
+
+        <p>With extensive experience in executing complex and large-scale projects, Ravion has established itself as a trusted partner in the pharmaceutical and biotechnology industries.</p>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789" alt="Water System">
+    </div>
+
 </div>
-
 </section>
+
 
 
 <!-- PRODUCTS -->
