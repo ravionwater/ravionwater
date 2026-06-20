@@ -39,21 +39,29 @@
 
 <style>
 
+
+/* NAV FLEX */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
 /* DROPDOWN WRAPPER */
 .dropdown {
     position: relative;
 }
 
-/* DROPDOWN MENU BOX */
+/* DROPDOWN MENU */
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 35px;
     left: 0;
 
     background: white;
     padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
 
     display: none;
     flex-direction: row;
@@ -68,20 +76,23 @@
 
 /* LINKS */
 .dropdown-col a {
-    padding: 8px 0;
+    padding: 6px 0;
     color: #333;
     text-decoration: none;
-    font-size: 14px;
 }
 
-.dropdown-col a:hover {
-    color: #0b3d91;
-}
-
-/* SHOW DROPDOWN ON HOVER */
+/* HOVER OPEN */
 .dropdown:hover .dropdown-menu {
     display: flex;
 }
+
+/* FIX MENU VISIBILITY */
+.nav-links a {
+    color: #0b3d91;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 
 .about-image-section img {
     width: 100%;
@@ -352,9 +363,14 @@ footer {
         <!-- MENU -->
         <nav class="nav-links">
             <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <div class="dropdown-menu">
-              <div class="dropdown-col">
+            
+            <!-- DROPDOWN -->
+            <div class="dropdown">
+              <a href="#">Products ▾</a>
+              
+              <div class="dropdown-menu">
+                
+                <div class="dropdown-col">
                   <a href="#">Pretreatment Systems</a>
                   <a href="#">Purified Water Generation Systems</a>
                   <a href="#">PW Storage & Distribution Systems</a>
