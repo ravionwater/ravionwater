@@ -39,7 +39,49 @@
 
 <style>
 
+/* DROPDOWN WRAPPER */
+.dropdown {
+    position: relative;
+}
 
+/* DROPDOWN MENU BOX */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+    background: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    display: none;
+    flex-direction: row;
+    gap: 40px;
+}
+
+/* COLUMN */
+.dropdown-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LINKS */
+.dropdown-col a {
+    padding: 8px 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-col a:hover {
+    color: #0b3d91;
+}
+
+/* SHOW DROPDOWN ON HOVER */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
 
 .about-image-section img {
     width: 100%;
