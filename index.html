@@ -55,9 +55,17 @@
 }
 
 
+
 .dropdown-menu {
-    gap: 50px;   /* ✅ space between 2 columns */
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
 
 
 .dropdown:hover .dropdown-menu {
@@ -231,7 +239,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 50px;
     margin-left: 30px;   /* ✅ pushes menu near logo */
 }
 
