@@ -39,6 +39,46 @@
 
 <style>
 
+
+/* MAIN SECTION */
+.product-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding: 60px 6%;
+    background: #f4f6fb;
+}
+
+/* IMAGE */
+.product-image {
+    flex: 1;
+    text-align: center;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 550px;
+}
+
+/* TEXT */
+.product-content {
+    flex: 1;
+}
+
+.product-content h2 {
+    color: #2d3e75;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.product-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+  
 /* FOOTER MAIN */
 
 
@@ -580,29 +620,29 @@ footer {
 
 </section>
 
-<div class="product-image-section-2 wf-section">
-    <div class="container-3 w-container">
-      <div class="produt-image-wrapper four">
-        <div class="product-image-block one">
-          <div class="product-image-block-rightt image1 roedi"></div>
-          <div class="product-image-block-left right-block">
-            <h1 class="product-image-title">Purified Water Generation</h1>
-            <p class="product-image-text">Our hot water sanitizable RO-EDI systems are factory tested and validated to consistently produce high-purity water with low conductivity, minimal bacterial contamination, and reduced TOC levels. Designed with robust engineering standards, these systems incorporate enhanced safety margins while optimizing energy efficiency and operational reliability.</p>
-           
-             
-            </a>
-          </div>
-        </div>
-        <div class="product-image-block reverse">
-          <div class="product-image-block-rightt stank"></div>
-          <div class="product-image-block-left-2">
-            <h1 class="product-image-title-2">Storage &amp; Distribution<br>Systems</h1>
-            <p class="product-image-text-2">The storage and distribution network is a critical component of any water purification facility. After treatment, purified water is stored and continuously recirculated throughout the distribution loop until it reaches the designated points of use. Our storage and distribution solutions are engineered to preserve water quality throughout the system, ensuring that key purity parameters remain stable without deterioration during storage and circulation.</p>
-           
-            
-            </a>
-          </div>
 
+<section class="product-section">
+
+  <!-- LEFT IMAGE -->
+  <div class="product-image">
+    <img src="ro-edi.jpg" alt="RO-EDI System">
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="product-content">
+    <h2>Purified Water Generation</h2>
+
+      <p class="product-image-text">Our hot water sanitizable RO-EDI systems are factory tested and validated to 
+        consistently produce high-purity water with low conductivity, minimal bacterial contamination, 
+        and reduced TOC levels. Designed with robust engineering standards, these systems incorporate 
+        enhanced safety margins while optimizing energy efficiency and operational reliability.</p>
+
+</div>
+
+</section>
+   
+             
+            
 <!-- BLOGS -->
 
 <section id="blogs">
