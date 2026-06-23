@@ -49,55 +49,46 @@ function toggleMenu() {
 
 
 
-/* MENU ICON (HIDDEN IN DESKTOP) */
+
+/* MENU ICON */
 .menu-toggle {
-    display: none;
-    font-size: 26px;
+    font-size: 28px;
     cursor: pointer;
+    display: none;
 }
 
-/* MOBILE VIEW */
+/* MOBILE */
 @media (max-width: 768px) {
 
     .menu-toggle {
-        display: block;   /* ✅ show icon */
+        display: block;    /* ✅ SHOW MENU ICON */
     }
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<nav class="nav-links" id="menu">
-  
     .nav-links {
-        display: none;   /* ✅ hide menu initially */
+        display: none;     /* ✅ HIDE MENU */
         flex-direction: column;
-        background: white;
         position: absolute;
         top: 70px;
-        right: 20px;
-        width: 220px;
-        padding: 10px;
+        right: 10px;
+        width: 230px;
+        background: white;
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        padding: 10px;
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex;     /* ✅ SHOW AFTER CLICK */
     }
+}
 
-    .nav-links a {
-        padding: 10px;
-        border-bottom: 1px solid #eee;
-    }
-
-    /* Fix spacing */
-    .container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
     .logo img {
         height: 60px;
     }
 }
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
+<nav class="nav-links" id="menu">
 
     /* HERO */
     .hero img {
