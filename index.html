@@ -37,25 +37,67 @@
 }
 </script>
 
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
 
 
 <style>
 
 
-/* MOBILE RESPONSIVE DESIGN */
+
+/* MENU ICON (HIDDEN IN DESKTOP) */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* MOBILE VIEW */
 @media (max-width: 768px) {
 
-    /* HEADER */
-    .container {
+    .menu-toggle {
+        display: block;   /* ✅ show icon */
+    }
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav class="nav-links" id="menu">
+  
+    .nav-links {
+        display: none;   /* ✅ hide menu initially */
         flex-direction: column;
-        gap: 15px;
+        background: white;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 220px;
+        padding: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    .nav-links.active {
+        display: flex;
     }
+
+    .nav-links a {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Fix spacing */
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+}
+
 
     /* HERO */
     .hero img {
