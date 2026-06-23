@@ -48,37 +48,39 @@ function toggleMenu() {
 
 
 
-/* MENU ICON */
+/* MENU BUTTON */
 .menu-toggle {
+    display: none;
     font-size: 28px;
     cursor: pointer;
-    display: none;
 }
 
-/* MOBILE */
+/* MOBILE VIEW */
 @media (max-width: 768px) {
 
     .menu-toggle {
-        display: block;    /* ✅ SHOW MENU ICON */
+        display: block;   /* ✅ SHOW BUTTON */
     }
 
     .nav-links {
-        display: none;     /* ✅ HIDE MENU */
+        display: none !important;  /* ❗ FORCE HIDE */
         flex-direction: column;
         position: absolute;
         top: 70px;
         right: 10px;
         width: 230px;
         background: white;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         padding: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
     .nav-links.active {
-        display: flex;     /* ✅ SHOW AFTER CLICK */
+        display: flex !important;  /* ✅ SHOW ONLY WHEN CLICK */
+
+    <nav class="nav-links" id="menu">
+      
     }
 }
-
 
     .logo img {
         height: 60px;
@@ -86,7 +88,7 @@ function toggleMenu() {
 }
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<nav class="nav-links" id="menu">
+
 
     /* HERO */
     .hero img {
@@ -509,7 +511,7 @@ body {
     height: 65px;
     width: auto;
 }
-
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 /* MENU */
 .nav-links {
     display: flex;
