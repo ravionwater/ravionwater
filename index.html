@@ -46,6 +46,50 @@
 
 <style>
 
+.solutions {
+    text-align: center;
+    padding: 60px 5%;
+}
+
+.solutions h2 {
+    font-size: 34px;
+    color: #0b3d91;
+    margin-bottom: 40px;
+}
+
+/* CONTAINER */
+.solution-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* BOX */
+.box {
+    flex: 1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.box p {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0b3d91;
+}
+
+/* HOVER EFFECT */
+.box:hover {
+    transform: scale(1.05);
+}
+
 
 /* ICON SIZE */
 .usp-item img {
@@ -675,15 +719,38 @@ footer {
 
 <!-- ABOUT -->
 
-
-
-
-
 <section class="about-image-section">
     <img src="banner.png" alt="Ravion Water">
 </section>
 
+<section class="solutions">
 
+  <h2>Complete High-Purity Water Systems – From Source to Point of Use</h2>
+
+  <div class="solution-container">
+
+    <!-- BOX 1 -->
+    <div class="box" onclick="changeImage(0)">
+      <img id="img0" src="system1.jpg">
+      <p>Systems</p>
+    </div>
+
+    <!-- BOX 2 -->
+    <div class="box" onclick="changeImage(1)">
+      <img id="img1" src="spares1.jpg">
+      <p>Spares</p>
+    </div>
+
+    <!-- BOX 3 -->
+    <div class="box" onclick="changeImage(2)">
+      <img id="img2" src="service1.jpg">
+      <p>Services</p>
+    </div>
+
+
+  </div>
+
+</section>
 
 
 
@@ -905,6 +972,22 @@ distribution system are;
 
 </a>
 
+<script>
+
+let images = [
+  ["system1.jpg", "system2.jpg"],
+  ["spares1.jpg", "spares2.jpg"],
+  ["service1.jpg", "service2.jpg"]
+];
+
+let index = [0,0,0];
+
+function changeImage(box) {
+    index[box] = (index[box] + 1) % images[box].length;
+    document.getElementById("img"+box).src = images[box][index[box]];
+}
+
+</script>  
 
 </body>
 </html>
