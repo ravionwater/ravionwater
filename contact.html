@@ -15,6 +15,7 @@
 .social-icons {
     margin-top: 20px;
     display: flex;
+    justify-content: center;   /* ✅ CENTER ALIGN */
     gap: 15px;
 }
 
@@ -29,12 +30,18 @@
     border-radius: 50%;
     text-decoration: none;
     font-size: 16px;
-    transition: 0.3s;
 }
 
 .social-icons a:hover {
     background: #0077b6;
 }
+
+.info-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
     
 /* RESET */
 body {
