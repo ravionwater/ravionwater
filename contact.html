@@ -15,26 +15,37 @@
 .social-icons {
     margin-top: 20px;
     display: flex;
-    justify-content: center;   /* ✅ CENTER ALIGN */
-    gap: 15px;
+    justify-content: right;   /* ✅ RIGHT ALIGN */
+    gap: 25px;
 }
 
 .social-icons a {
     width: 40px;
     height: 40px;
-    background: #0b3d91;
-    color: white;
+
+    background: none;     /* ❌ remove blue completely */
+    border: none;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 16px;
+
+    font-size: 20px;
 }
 
-.social-icons a:hover {
-    background: #0077b6;
+/* BRAND COLORS */
+.social-icons a:nth-child(1) i {
+    color: #0077b5;   /* LinkedIn */
 }
+
+.social-icons a:nth-child(2) i {
+    color: #1877f2;   /* Facebook */
+}
+
+.social-icons a:nth-child(3) i {
+    color: #e4405f;   /* Instagram */
+}
+
 
     
 /* RESET */
