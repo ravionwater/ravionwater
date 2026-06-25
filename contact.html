@@ -38,32 +38,24 @@ body {
     height: 60px;
 }
 
-/* MENU */
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    color: #0b3d91;
-    text-decoration: none;
-    font-weight: 600;
-}
-
 /* HERO */
 .contact-hero {
     display: flex;
+    margin-bottom: 40px;
 }
 
 .hero-left {
     flex: 1;
-    background: #0b3d91;
+    background: linear-gradient(135deg, #0b3d91, #1e5ccf);
     color: white;
-    padding: 40px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .hero-left h2 {
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 1.4;
 }
 
 .hero-right {
@@ -76,28 +68,36 @@ body {
     object-fit: cover;
 }
 
-/* CONTACT INFO */
+/* CONTACT INFO + MAP */
 .contact-info {
     display: flex;
-    gap: 40px;
-    padding: 40px 6%;
+    gap: 30px;
+    padding: 20px 6%;
 }
 
 .info-left {
     flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
 .info-left h3 {
     color: #0b3d91;
+    margin-bottom: 20px;
 }
 
 .info-left p {
     margin: 15px 0;
+    font-size: 15px;
+    color: #444;
 }
 
 .info-left i {
     color: #0b3d91;
     margin-right: 10px;
+    font-size: 18px;
 }
 
 /* MAP */
@@ -108,6 +108,7 @@ body {
 .info-right iframe {
     width: 100%;
     height: 320px;
+    border-radius: 10px;
     border: none;
 }
 
@@ -117,20 +118,28 @@ body {
 }
 
 .contact-form h3 {
-    margin-bottom: 20px;
     color: #0b3d91;
+    margin-bottom: 20px;
 }
 
+/* FORM BOX */
 .contact-form form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
+/* INPUT */
 .contact-form input,
 .contact-form textarea {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
 .contact-form textarea {
@@ -138,17 +147,25 @@ body {
     height: 100px;
 }
 
+/* BUTTON */
 .contact-form button {
     grid-column: span 2;
     background: #0b3d91;
     color: white;
-    padding: 12px;
+    padding: 14px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 15px;
+}
+
+.contact-form button:hover {
+    background: #0077b6;
 }
 
 /* MOBILE */
 @media(max-width:768px) {
+
     .contact-hero,
     .contact-info {
         flex-direction: column;
@@ -216,7 +233,7 @@ info@ravionwater.in</p>
 <div class="info-right">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.509933351672!2d78.45478947369313!3d17.53089219865815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8fcc3b7b8933%3A0x684646739770bdce!2sRAVION%20WATER%20TECH!5e0!3m2!1sen!2sin!4v1782371906190!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"</iframe>
 
-</div>
+</div> <!-- ✅ CLOSE contact-info -->
 
 
 <!-- FORM -->
