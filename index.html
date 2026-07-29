@@ -46,6 +46,455 @@
 
 <style>
 
+    :root{
+      --navy:#071228;
+      --navy-2:#0a1833;
+      --text:#13213b;
+      --muted:#56647b;
+      --white:#ffffff;
+      --line:rgba(255,255,255,.10);
+
+      --blue-1:#1c59ff;
+      --blue-2:#06bce8;
+      --orange-1:#ff6812;
+      --orange-2:#ffc400;
+      --green-1:#08ad78;
+      --green-2:#08d0ba;
+
+      --yellow:#ffbd00;
+      --green:#00ad65;
+      --sky:#24b8ee;
+
+      --shadow:0 24px 55px rgba(0,0,0,.22);
+      --radius:24px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:"Manrope", Arial, sans-serif;
+      background:var(--navy);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+    }
+
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button,input,textarea{font:inherit}
+
+    .container{
+      width:min(1320px, calc(100% - 42px));
+      margin-inline:auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(7,18,40,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid transparent;
+      transition:.25s ease;
+    }
+
+    .site-header.scrolled{
+      border-bottom-color:var(--line);
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
+    }
+
+    .navbar{
+      min-height:112px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+
+    .brand{
+      width:172px;
+      height:48px;
+      background:#fff;
+      border-radius:14px;
+      padding:7px 15px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 10px 25px rgba(0,0,0,.18);
+    }
+
+    .brand img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:40px;
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+
+    .nav-links a{
+      position:relative;
+      font-size:14px;
+      font-weight:700;
+      color:#d9e1ef;
+      transition:.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active{
+      color:#fff;
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:-10px;
+      height:2px;
+      border-radius:2px;
+      transform:scaleX(0);
+      background:var(--sky);
+      transition:.2s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after{
+      transform:scaleX(1);
+    }
+
+    .menu-btn{
+      display:none;
+      width:44px;
+      height:44px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:rgba(255,255,255,.04);
+      color:#fff;
+      cursor:pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+    .hero{
+      padding:36px 0 26px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) 340px;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .hero-visual{
+      position:relative;
+      min-height:650px;
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:
+        linear-gradient(90deg, rgba(2,10,25,.13), rgba(2,10,25,.03)),
+        url("assets/hero-water-system.jpg") center/cover no-repeat;
+      box-shadow:var(--shadow);
+      isolation:isolate;
+    }
+
+    .hero-visual::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:
+        linear-gradient(180deg, rgba(6,16,35,.02), rgba(6,16,35,.12)),
+        radial-gradient(circle at 70% 45%, transparent 0 48%, rgba(6,16,35,.08) 100%);
+    }
+
+    .hero-card{
+      position:absolute;
+      left:54px;
+      top:50%;
+      transform:translateY(-44%);
+      width:min(620px, calc(100% - 100px));
+      padding:38px 40px 36px;
+      background:rgba(255,255,255,.95);
+      color:var(--text);
+      border-radius:28px;
+      box-shadow:0 25px 70px rgba(5,17,37,.28);
+      backdrop-filter:blur(9px);
+      border:1px solid rgba(255,255,255,.7);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      min-height:30px;
+      padding:0 13px;
+      border:1px solid #aee7fb;
+      border-radius:999px;
+      background:#eaf9ff;
+      color:#22aee8;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.035em;
+      text-transform:uppercase;
+    }
+
+    .eyebrow svg{width:14px;height:14px}
+
+    h1{
+      margin:20px 0 19px;
+      font-size:42px;
+      line-height:1.12;
+      letter-spacing:-.04em;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+
+    .accent-yellow{color:var(--yellow)}
+    .accent-green{color:var(--green)}
+
+    .hero-card p{
+      margin:0;
+      max-width:540px;
+      font-size:16px;
+      line-height:1.65;
+      font-weight:600;
+      color:#45546e;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:13px;
+      margin-top:28px;
+    }
+
+    .btn{
+      min-height:50px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 24px;
+      border-radius:12px;
+      font-size:13px;
+      font-weight:800;
+      transition:.22s ease;
+      border:1px solid transparent;
+    }
+
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,#159edc,#2fc3ef);
+      box-shadow:0 12px 24px rgba(34,174,232,.22);
+    }
+
+    .btn-primary:hover{transform:translateY(-2px)}
+
+    .btn-secondary{
+      color:#33415c;
+      background:#f7f9fc;
+      border-color:#e2e8f1;
+    }
+
+    .btn-secondary:hover{
+      background:#fff;
+      border-color:#cfd8e6;
+      transform:translateY(-2px);
+    }
+
+    /* =========================
+       RIGHT SERVICE CARDS
+    ========================== */
+    .service-stack{
+      display:grid;
+      gap:18px;
+    }
+
+    .service-card{
+      position:relative;
+      min-height:198px;
+      border-radius:22px;
+      padding:26px 24px 22px;
+      overflow:hidden;
+      box-shadow:0 20px 44px rgba(0,0,0,.18);
+    }
+
+    .service-card::before{
+      content:"";
+      position:absolute;
+      width:180px;
+      height:180px;
+      right:-70px;
+      top:-80px;
+      border-radius:50%;
+      background:rgba(255,255,255,.10);
+    }
+
+    .service-card.blue{background:linear-gradient(135deg,var(--blue-1),var(--blue-2))}
+    .service-card.orange{background:linear-gradient(135deg,var(--orange-1),var(--orange-2))}
+    .service-card.green{background:linear-gradient(135deg,var(--green-1),var(--green-2))}
+
+    .service-head{
+      position:relative;
+      z-index:2;
+      display:flex;
+      align-items:center;
+      gap:11px;
+      font-size:14px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .service-icon{
+      width:36px;
+      height:36px;
+      display:grid;
+      place-items:center;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,.38);
+      background:rgba(255,255,255,.10);
+    }
+
+    .service-icon svg{width:20px;height:20px}
+
+    .service-body{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1fr 112px;
+      gap:14px;
+      align-items:end;
+      margin-top:18px;
+    }
+
+    .service-text{
+      min-height:112px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .service-text p{
+      margin:0;
+      font-size:12px;
+      line-height:1.28;
+      font-weight:700;
+      max-width:165px;
+    }
+
+    .service-link{
+      width:max-content;
+      padding-bottom:3px;
+      border-bottom:2px solid rgba(255,255,255,.36);
+      font-size:11px;
+      font-weight:800;
+    }
+
+    .service-image{
+      width:112px;
+      height:112px;
+      padding:8px;
+      background:#fff;
+      border-radius:16px;
+      overflow:hidden;
+    }
+
+    .service-image img{
+      width:100%;
+      height:100%;
+      border-radius:10px;
+      object-fit:cover;
+    }
+
+/* =========================
+       RESPONSIVE
+    ========================== */
+    @media (max-width:1150px){
+      .hero-grid{grid-template-columns:1fr 300px}
+      .hero-card{left:34px;width:min(600px, calc(100% - 68px))}
+      .nav-links{gap:25px}
+      h1{font-size:37px}
+    }
+
+    @media (max-width:900px){
+      .navbar{min-height:82px}
+      .menu-btn{display:grid;place-items:center}
+
+      .nav-links{
+        position:absolute;
+        left:21px;
+        right:21px;
+        top:76px;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:12px;
+        border:1px solid var(--line);
+        border-radius:16px;
+        background:#0a1731;
+        box-shadow:var(--shadow);
+      }
+
+      .nav-links.open{display:flex}
+      .nav-links a{display:block;padding:13px 12px}
+      .nav-links a::after{display:none}
+
+      .hero-grid{grid-template-columns:1fr}
+      .service-stack{grid-template-columns:repeat(3,1fr)}
+      .service-card{min-height:245px}
+      .service-body{grid-template-columns:1fr}
+      .service-image{width:100%;height:100px}
+      .service-text{min-height:100px}
+      .consultation-pill{display:none}
+    }
+
+    @media (max-width:680px){
+      .container{width:min(100% - 26px, 1320px)}
+      .hero{padding-top:18px}
+      .hero-visual{min-height:620px}
+
+      .hero-card{
+        left:16px;
+        right:16px;
+        bottom:18px;
+        top:auto;
+        transform:none;
+        width:auto;
+        padding:27px 23px;
+        border-radius:22px;
+      }
+
+      h1{font-size:31px}
+      .hero-card p{font-size:14px}
+      .hero-actions{display:grid}
+      .btn{width:100%}
+
+      .service-stack{grid-template-columns:1fr}
+      .service-card{min-height:190px}
+      .service-body{grid-template-columns:1fr 110px}
+      .service-image{width:110px;height:110px}
+
+      .brand{width:150px;height:44px}
+      .floating-actions{right:18px;bottom:20px}
+      .float-btn{width:54px;height:54px}
+    }
+  
+  
+  
 .solutions {
     text-align: center;
     padding: 60px 5%;
@@ -711,7 +1160,110 @@ footer {
 
 </header>
 
+<main>
+    <section class="hero">
+      <div class="container hero-grid">
 
+        <div class="hero-visual">
+          <article class="hero-card">
+            <div class="eyebrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2s6 6.2 6 12a6 6 0 1 1-12 0c0-5.8 6-12 6-12Z"/>
+                <path d="M9.5 15.2c.5 1.5 1.5 2.3 3 2.5"/>
+              </svg>
+              Next-Gen High Purity Water Engineering
+            </div>
+
+            <h1>
+              Find Your <span class="accent-yellow">High-Purity</span><br>
+              System <span class="accent-green">in India</span>
+            </h1>
+
+            <p>
+              Engineering FDA/USP-compliant, fully validated Purified Water (PW)
+              Systems, Water for Injection (WFI) Plants, and Pure Steam Generators
+              (PSG) for pharmaceutical facilities in Hyderabad, Telangana, and across India.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#systems">Explore Our Systems</a>
+              <a class="btn btn-secondary" href="#contact">Request Engineering Quote</a>
+            </div>
+          </article>
+        </div>
+
+        <aside class="service-stack" aria-label="Main services">
+
+          <article class="service-card blue" id="systems">
+            <div class="service-head">
+              <span class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3s6 6 6 11a6 6 0 0 1-12 0c0-5 6-11 6-11Z"/>
+                  <path d="M9 15a3 3 0 0 0 3 2"/>
+                </svg>
+              </span>
+              Systems
+            </div>
+
+            <div class="service-body">
+              <div class="service-text">
+                <p>PW generation skids, WFI plants, PSG generators, storage tanks, and loops.</p>
+                <a class="service-link" href="#systems">Browse Systems →</a>
+              </div>
+              <div class="service-image">
+                <img src="assets/system-card.jpg" alt="Purified water generation system">
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card orange" id="spares">
+            <div class="service-head">
+              <span class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M8 3h8l1 3 3 1v10l-3 1-1 3H8l-1-3-3-1V7l3-1 1-3Z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </span>
+              Spares
+            </div>
+
+            <div class="service-body">
+              <div class="service-text">
+                <p>ASME BPE pipes, fittings, diaphragm valves, pumps, membranes, and instruments.</p>
+                <a class="service-link" href="#spares">Explore Spares →</a>
+              </div>
+              <div class="service-image">
+                <img src="assets/spares-card.jpg" alt="Pharmaceutical piping and valve spares">
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card green" id="services">
+            <div class="service-head">
+              <span class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+              </span>
+              Services
+            </div>
+
+            <div class="service-body">
+              <div class="service-text">
+                <p>ASME IX orbital welding, boroscopy, passivation, commissioning, and IQ/OQ validation.</p>
+                <a class="service-link" href="#services">Explore Services →</a>
+              </div>
+              <div class="service-image">
+                <img src="assets/service-card.jpg" alt="Orbital welding service">
+              </div>
+            </div>
+          </article>
+
+        </aside>
+      </div>
+    </section>
+  </main>
 
 
 
